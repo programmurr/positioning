@@ -1,4 +1,4 @@
-# Positioning and FLoating Elements
+# Positioning and Floating Elements
 
 An assignment from [The Odin Project](https://www.theodinproject.com/paths/full-stack-javascript/courses/html-and-css/lessons/positioning-and-floating-elements)
 
@@ -6,4 +6,4 @@ An assignment from [The Odin Project](https://www.theodinproject.com/paths/full-
 
 ## Status
 
-In progress. View my progress live on [Github](https://github.com/).
+In progress. View my progress live on [Github](https://programmurr.github.io/positioning/).
