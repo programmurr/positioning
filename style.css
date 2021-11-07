@@ -1,5 +1,10 @@
 :root {
-  --ns-blue: #288eb7;
+  --ns-blue: #00b3e5;
+  --ns-hover-blue: #288eb7;
+  --chevrons: #4d4d4d;
+  --ns-border-grey: #bfbfbf;
+  --ns-light-grey: #999;
+  --ns-nav-line: #002837;
 }
 
 * {
@@ -9,21 +14,119 @@
 
 @font-face {
   font-family: TitilliumWeb-SemiBold;
-  src: url(./assets/fonts/TitilliumWeb-SemiBold.ttf);
+  src: url(./assets/fonts/titilliumweb/TitilliumWeb-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: PTSerif-Regular;
+  src: url(./assets/fonts/pt-serif/PTSerif-Regular.ttf);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.content {
+  max-width: 1130px;
 }
 
 /* 
 ==============================
-NAVBAR
+HEADER
 ==============================
 */
 
-nav {
+header {
   font-family: TitilliumWeb-SemiBold, Helvetica, Aria, sans-serif;
   font-weight: 600;
+  width: 100%;
 }
 
-.link-account {
+header::after {
+  display: block;
+  width: 100vw;
+  height: 1px;
+  content: "";
+  border-bottom: 1px solid var(--ns-border-grey);
+}
+
+.news-letter-head {
+  margin: 0;
+  padding: 0;
+  color: var(--ns-blue);
+}
+
+.news-letter-head:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.news-letter-link {
+  font-family: PTSerif-Regular, Georgia, serif;
+  color: var(--ns-light-grey);
+  text-decoration: none;
+}
+
+.news-letter-link:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+.subscribe-button {
+  color: white;
+  font-family: TitilliumWeb-SemiBold, Helvetica, Aria, sans-serif;
+  font-size: 1rem;
+  padding: 0.1rem 0.7rem;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--ns-blue);
+  transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+  cursor: pointer;
+  background-color: var(--ns-hover-blue);
+}
+
+/* 
+==============================
+HEADER - NAVBAR
+==============================
+*/
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--ns-blue);
+}
+
+.nav-link.active {
+  color: var(--ns-blue);
+}
+
+.nav-link.more:after {
+  content: "»";
+  display: inline-block;
+  transform: rotate(90deg);
+  color: var(--chevrons);
+}
+
+.nav-link.promo {
+  color: var(--ns-blue);
+}
+
+.nav-link.account {
   width: 16px;
   height: 16px;
+}
+
+.nav-link.account:hover {
+  opacity: 50%;
 }
