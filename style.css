@@ -22,13 +22,18 @@
   src: url(./assets/fonts/pt-serif/PTSerif-Regular.ttf);
 }
 
-html {
+html,
+body {
   box-sizing: border-box;
   font-size: 16px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .content {
-  max-width: 1130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* 
@@ -37,18 +42,26 @@ HEADER
 ==============================
 */
 
+/* FIZ HORIZONTAL SCROLL ADDED */
+
 header {
+  width: 100%;
+  max-width: 1130px;
   font-family: TitilliumWeb-SemiBold, Helvetica, Aria, sans-serif;
   font-weight: 600;
-  width: 100%;
+  border-bottom: 1px solid var(--ns-border-grey);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  justify-items: center;
+  align-items: center;
 }
 
-header::after {
-  display: block;
-  width: 100vw;
-  height: 1px;
-  content: "";
-  border-bottom: 1px solid var(--ns-border-grey);
+.news-letter {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  font-size: 0.8rem;
+  padding: 10px 20px;
 }
 
 .news-letter-head {
@@ -70,6 +83,16 @@ header::after {
 
 .news-letter-link:hover {
   text-decoration: underline;
+}
+
+.title-box {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.subscribe-box {
+  grid-column: 3/4;
+  grid-row: 1/2;
 }
 
 h1 {
@@ -98,6 +121,14 @@ HEADER - NAVBAR
 ==============================
 */
 
+nav {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  justify-self: stretch;
+  display: flex;
+  justify-content: space-around;
+}
+
 .nav-link {
   color: black;
   text-decoration: none;
@@ -116,6 +147,7 @@ HEADER - NAVBAR
   display: inline-block;
   transform: rotate(90deg);
   color: var(--chevrons);
+  margin-left: 5px;
 }
 
 .nav-link.promo {
