@@ -1,0 +1,29 @@
+:root {
+  --ns-blue: #288eb7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: TitilliumWeb-SemiBold;
+  src: url(./assets/fonts/TitilliumWeb-SemiBold.ttf);
+}
+
+/* 
+==============================
+NAVBAR
+==============================
+*/
+
+nav {
+  font-family: TitilliumWeb-SemiBold, Helvetica, Aria, sans-serif;
+  font-weight: 600;
+}
+
+.link-account {
+  width: 16px;
+  height: 16px;
+}
